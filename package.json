@@ -1,0 +1,18 @@
+{
+  "name": "web-app",
+  "version": "1.0.0",
+  "author": "Prashanth Grandhi",
+  "description": "Web application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "MEAN"
+  ],
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

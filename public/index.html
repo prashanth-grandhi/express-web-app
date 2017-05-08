@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Map</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyCdYoo0z40Vujgi9r5QVJOuNiOjZ9beH0I&libraries=visualization"></script>
+    <script src="javascript/script.js" async defer></script>
+</head>
+<body>
+    <div id="floating-panel">
+        <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+        <button onclick="changeGradient()">Change gradient</button>
+        <button onclick="changeRadius()">Change radius</button>
+        <button onclick="changeOpacity()">Change opacity</button>
+    </div>
+    <div id="map">
+        Loading...
+    </div>
+    <form id="myform">
+        <button id="clear-path" type="button" class="form-button">Clear Path</button>
+        <button id="save-path" type="button" class="form-button">Save Path</button>
+        <button id="heatmap" type="button" class="form-button">Show Heat Map</button><br />
+        <select id="paths" size="10"></select><br />
+        <button id="save-json" type="button" class="form-button">Save as Json</button>
+    </form>
+</body>
+</html>

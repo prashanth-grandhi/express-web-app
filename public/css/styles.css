@@ -1,0 +1,56 @@
+body {
+    background-color: #fafafa;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 20px;
+}
+
+div#map {
+    width: 100%;
+    height: 440px;
+}
+
+div#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto', 'sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+div#floating-panel {
+    background-color: #fff;
+    border: 1px solid #999;
+    left: 25%;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    z-index: 5;
+}
+
+form {
+    margin: 5px;
+}
+
+.form-button {
+    color: black;
+    background-color: #98FB98;
+    padding: 10px 12px;
+    margin: 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+}
+
+select {
+    width: 250px;
+    height: 200px;
+    margin: 5px -20px -5px 20px;
+    display: inline-block;
+    font-size: 14px;
+}
