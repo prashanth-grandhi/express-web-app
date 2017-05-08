@@ -10,7 +10,9 @@ function initMap() {
     var latitude = 60.1675;
     var longitude = 24.9311;
     paths = new Array();
+
     console.log("Initialize Map: " + latitude, longitude);
+    
     var googleLatLong = new google.maps.LatLng(latitude, longitude);
     var mapOptions = {
         zoom: 14,
