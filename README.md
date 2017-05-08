@@ -7,7 +7,10 @@ This is a web app comprising of a single webpage which utilizes the Google Maps 
 It uses Express node.js framework, which can serve static files like HTML, CSS, client-side javascript. The Express app listens for requests on localhost at port 8081.
 
 ## Running the app
-Assumption: Node.js and npm is installed*
+Assumption: 
+- Node.js and npm is installed*
+- Google API key is added to the application. Details you can check https://developers.google.com/maps/documentation/javascript/get-api-key
+
 
 Go to folder containing app.js and Run the following in terminal window:
 1. npm install
