@@ -2,17 +2,14 @@ var map;
 var heatmap;
 var poly;
 var markers = [];
-var paths;
+var paths = [];
 var selectList;
 
 // Initializes map and setup form elements
 function initMap() {
     var latitude = 60.1675;
     var longitude = 24.9311;
-    paths = new Array();
-
     console.log("Initialize Map: " + latitude, longitude);
-    
     var googleLatLong = new google.maps.LatLng(latitude, longitude);
     var mapOptions = {
         zoom: 14,
@@ -75,7 +72,6 @@ function addPoint(event) {
     // Because path is an MVCArray, we can simply append a new coordinate
     // and it will automatically appear.
     path.push(event.latLng);
-
     var options = {
         position: event.latLng,
         map: map,
@@ -94,7 +90,6 @@ function savePath() {
                 coordinates.push(marker.getPosition());
             });
             paths.push(coordinates);
-
             var text = "Path " + paths.length;
             var option = document.createElement("option");
             option.value = paths.length;
@@ -116,7 +111,6 @@ function clearPath() {
 function clearLine() {
     // Remove polyline from the map
     poly.setMap(null);
-
     // Reset polyline
     poly = null;
     poly = new google.maps.Polyline({strokeColor: '#000000', strokeOpacity: 1.0, strokeWeight: 3});
@@ -133,7 +127,6 @@ function clearMarkers() {
 // Add saved path coordinates to the map
 function addMarkersAndLine(index) {
     clearPath();
-
     var coordinates = paths[index];
     coordinates.forEach(function(latLng) {
         var options = {
@@ -144,7 +137,6 @@ function addMarkersAndLine(index) {
         var marker = new google.maps.Marker(options);
         markers.push(marker);
     });
-
     poly = new google.maps.Polyline({path: coordinates, geodesic: true, strokeColor: '#000000', strokeOpacity: 1.0, strokeWeight: 2});
     poly.setMap(map);
 }
@@ -166,10 +158,8 @@ function sendJson() {
             jArray.push({coordinates: jArray2});
             jObject['paths'] = jArray;
         }
-
         console.log("jsonData: " + JSON.stringify(jObject, null, "    "));
-
-        // Async ajax request to post json
+        // Async AJAX request to post json
         var http = new XMLHttpRequest();
         http.open("POST", 'http://localhost:8081/process_post', true);
         http.setRequestHeader("Content-type", "application/json;charset=utf-8");

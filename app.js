@@ -6,10 +6,9 @@ var app = express();
 
 // Define the port to run on
 app.set('port', 8081);
-
 // Parse application/json
 app.use(bodyParser.json())
-
+// To serve static files in public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/process_post', function(req, res) {
