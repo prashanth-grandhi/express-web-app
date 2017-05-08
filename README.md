@@ -1,7 +1,7 @@
 Google Maps App
 ===============
 
-This is a simple web app comprising of a single webpage which utilizes the Google Maps API to display a map of Helsinki city center. The user is able to plot paths on top of this map by clicking at different points on the map.
+This is a web app comprising of a single webpage which utilizes the Google Maps API to display a map of Helsinki city center. The user is able to plot paths on top of this map by clicking at different points on the map.
 
 ## Setup
 It uses Express node.js framework, which can serve static files like HTML, CSS, client-side javascript. The Express app listens for requests on localhost at port 8081.
@@ -27,7 +27,7 @@ At this point the map is initialized at zoom level 14 with fixed coordinates. Yo
 ## Features
 1. The web app allows users to save the paths they have plotted
 2. Max limit of the number of paths that can be saved in a single session to 10 paths, each containing a maximum of 10 coordinate points
-3. Once the paths are saved, the user should be able to visualize the paths in form of a heatmap layover atop the map displayed on the page
+3. Once the paths are saved, the user is able to visualize the paths in form of a heatmap layover atop the map displayed on the page
 4. Save all path coordinates as json and send it to server. A file paths.json is created in the public folder of the app
 
 ## Tests
